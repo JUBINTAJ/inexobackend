@@ -21,14 +21,6 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
 };
 app.use(cors(corsOptions));
-// app.options("*", cors(corsOptions));
-
-// app.use(cors(
-//   {
-//     origin:'https://inexofrontend.vercel.app',
-//     credentials:true
-//   }
-// ));
 
 
 
