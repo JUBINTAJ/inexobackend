@@ -14,13 +14,21 @@ const app = express()
 const port = process.env.PORT || 7000
 
 
+const corsOptions = {
+  origin: 'https://inexofrontend.vercel.app',  
+  credentials: true, 
+  allowedHeaders: ["Content-Type", "Authorization"], 
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
+};
+app.use(cors(corsOptions));
+// app.options("*", cors(corsOptions));
 
-app.use(cors(
-  {
-    origin:'https://inexofrontend.vercel.app',
-    credentials:true
-  }
-));
+// app.use(cors(
+//   {
+//     origin:'https://inexofrontend.vercel.app',
+//     credentials:true
+//   }
+// ));
 
 
 
