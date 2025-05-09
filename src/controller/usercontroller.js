@@ -33,8 +33,8 @@ export const userLogin=asyncHandler(async(req,res)=>{
     const refreshToken = generateRefreshToken(user) 
 
     res
-       .cookie('accessToken',accessToken,{httpOnly : true , secure: false  , maxAge : 3 * 24 * 60 * 60 * 1000 , path:'/'})
-       .cookie('refreshToken',refreshToken ,{httpOnly :true , secure : false , maxAge : 7 * 24 * 60 * 60 * 1000})
+       .cookie('accessToken',accessToken,{httpOnly : true , secure: true  ,sameSite: 'None', maxAge : 3 * 24 * 60 * 60 * 1000 , path:'/'})
+       .cookie('refreshToken',refreshToken ,{httpOnly :true , secure : true ,sameSite: 'None', maxAge : 7 * 24 * 60 * 60 * 1000})
         
        .status(200).json({
         status : STATUS.SUCCESS,
