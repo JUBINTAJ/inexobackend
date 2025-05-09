@@ -17,7 +17,9 @@ const port = process.env.PORT || 7000
 
 app.use(cors(
   {
-    origin:'https://inexofrontend.vercel.app',
+         origin:'https://inexofrontend.vercel.app',
+
+    // origin:'https://inexofrontend.vercel.app',
     credentials:true
   }
 ));
